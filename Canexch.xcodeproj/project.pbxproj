@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		5522CDE61FA10E5000055FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDE51FA10E5000055FFF /* AppDelegate.swift */; };
 		5522CDE81FA10E5000055FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDE71FA10E5000055FFF /* ViewController.swift */; };
-		5522CDEB1FA10E5000055FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5522CDE91FA10E5000055FFF /* Main.storyboard */; };
 		5522CDED1FA10E5000055FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5522CDEC1FA10E5000055FFF /* Assets.xcassets */; };
 		5522CDF01FA10E5000055FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5522CDEE1FA10E5000055FFF /* LaunchScreen.storyboard */; };
+		D8575657044788F0A15C676D /* Pods_Canexch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1AB4A7A957CF9A0699CB1F /* Pods_Canexch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E1AB4A7A957CF9A0699CB1F /* Pods_Canexch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Canexch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5522CDE21FA10E5000055FFF /* Canexch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canexch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5522CDE51FA10E5000055FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5522CDE71FA10E5000055FFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5522CDEA1FA10E5000055FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5522CDEC1FA10E5000055FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5522CDEF1FA10E5000055FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5522CDF11FA10E5000055FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A016AA78977A7943FE2FDF7 /* Pods-Canexch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canexch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Canexch/Pods-Canexch.release.xcconfig"; sourceTree = "<group>"; };
+		F941053B38C575BF67CD4DA6 /* Pods-Canexch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canexch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Canexch/Pods-Canexch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8575657044788F0A15C676D /* Pods_Canexch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22883F432F77C34295F03693 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E1AB4A7A957CF9A0699CB1F /* Pods_Canexch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FAC7AC15B60216E24B15606 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F941053B38C575BF67CD4DA6 /* Pods-Canexch.debug.xcconfig */,
+				5A016AA78977A7943FE2FDF7 /* Pods-Canexch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5522CDD91FA10E5000055FFF = {
 			isa = PBXGroup;
 			children = (
 				5522CDE41FA10E5000055FFF /* Canexch */,
 				5522CDE31FA10E5000055FFF /* Products */,
+				4FAC7AC15B60216E24B15606 /* Pods */,
+				22883F432F77C34295F03693 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +78,6 @@
 			children = (
 				5522CDE51FA10E5000055FFF /* AppDelegate.swift */,
 				5522CDE71FA10E5000055FFF /* ViewController.swift */,
-				5522CDE91FA10E5000055FFF /* Main.storyboard */,
 				5522CDEC1FA10E5000055FFF /* Assets.xcassets */,
 				5522CDEE1FA10E5000055FFF /* LaunchScreen.storyboard */,
 				5522CDF11FA10E5000055FFF /* Info.plist */,
@@ -71,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5522CDF41FA10E5000055FFF /* Build configuration list for PBXNativeTarget "Canexch" */;
 			buildPhases = (
+				3DC89D928CAFA87F9DCCF294 /* [CP] Check Pods Manifest.lock */,
 				5522CDDE1FA10E5000055FFF /* Sources */,
 				5522CDDF1FA10E5000055FFF /* Frameworks */,
 				5522CDE01FA10E5000055FFF /* Resources */,
+				C8BBC244E499B48C9B52DFFF /* [CP] Embed Pods Frameworks */,
+				89342FF15423108DEBE7B2D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,11 +149,58 @@
 			files = (
 				5522CDF01FA10E5000055FFF /* LaunchScreen.storyboard in Resources */,
 				5522CDED1FA10E5000055FFF /* Assets.xcassets in Resources */,
-				5522CDEB1FA10E5000055FFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DC89D928CAFA87F9DCCF294 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		89342FF15423108DEBE7B2D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Canexch/Pods-Canexch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8BBC244E499B48C9B52DFFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Canexch/Pods-Canexch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5522CDDE1FA10E5000055FFF /* Sources */ = {
@@ -144,14 +215,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5522CDE91FA10E5000055FFF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5522CDEA1FA10E5000055FFF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5522CDEE1FA10E5000055FFF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -272,6 +335,7 @@
 		};
 		5522CDF51FA10E5000055FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F941053B38C575BF67CD4DA6 /* Pods-Canexch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +351,7 @@
 		};
 		5522CDF61FA10E5000055FFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A016AA78977A7943FE2FDF7 /* Pods-Canexch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
