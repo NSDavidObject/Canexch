@@ -18,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Window setup
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
+        
+        let mainViewController = MainViewController()
+        let keyboardSizerViewController = KeyboardSizableContainerViewController(childViewController: mainViewController)
+        window?.rootViewController = keyboardSizerViewController
         window?.makeKeyAndVisible()
         
         return true

@@ -8,20 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		5522CDE61FA10E5000055FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDE51FA10E5000055FFF /* AppDelegate.swift */; };
-		5522CDE81FA10E5000055FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDE71FA10E5000055FFF /* ViewController.swift */; };
+		5522CDE81FA10E5000055FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDE71FA10E5000055FFF /* MainViewController.swift */; };
 		5522CDED1FA10E5000055FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5522CDEC1FA10E5000055FFF /* Assets.xcassets */; };
 		5522CDF01FA10E5000055FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5522CDEE1FA10E5000055FFF /* LaunchScreen.storyboard */; };
+		5522CDF91FA11DD500055FFF /* FixerAPIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDF81FA11DD500055FFF /* FixerAPIConstants.swift */; };
+		5522CDFC1FA11E0900055FFF /* FixerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDFB1FA11E0900055FFF /* FixerNetworkRequest.swift */; };
+		5522CDFE1FA11E2700055FFF /* FixerGetNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDFD1FA11E2700055FFF /* FixerGetNetworkRequest.swift */; };
+		5522CE011FA11E5800055FFF /* FixerLastestDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE001FA11E5800055FFF /* FixerLastestDataRequest.swift */; };
+		5522CE041FA120D400055FFF /* FixerLatestDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE031FA120D400055FFF /* FixerLatestDataResponse.swift */; };
+		5522CE071FA120FD00055FFF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE061FA120FD00055FFF /* Currency.swift */; };
+		5522CE0C1FA1684000055FFF /* ExchangeRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE0B1FA1684000055FFF /* ExchangeRateManager.swift */; };
+		5522CE0F1FA1752300055FFF /* Optional+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE0E1FA1752300055FFF /* Optional+Additions.swift */; };
+		5522CE111FA175C400055FFF /* KeyboardSizableContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE101FA175C300055FFF /* KeyboardSizableContainerViewController.swift */; };
+		5522CE131FA176D600055FFF /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE121FA176D600055FFF /* UIViewController+Additions.swift */; };
+		5522CE171FA177A500055FFF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5522CE151FA177A500055FFF /* MainViewController.xib */; };
+		5522CE1F1FA20A3300055FFF /* CanexchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE1E1FA20A3300055FFF /* CanexchTests.swift */; };
+		5522CE271FA20A6400055FFF /* ExchangeRateManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE261FA20A6400055FFF /* ExchangeRateManagerTest.swift */; };
+		5522CE2A1FA2661E00055FFF /* NumberInputTextfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CE291FA2661E00055FFF /* NumberInputTextfieldDelegate.swift */; };
 		D8575657044788F0A15C676D /* Pods_Canexch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1AB4A7A957CF9A0699CB1F /* Pods_Canexch.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5522CE211FA20A3300055FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5522CDDA1FA10E5000055FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5522CDE11FA10E5000055FFF;
+			remoteInfo = Canexch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2E1AB4A7A957CF9A0699CB1F /* Pods_Canexch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Canexch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5522CDE21FA10E5000055FFF /* Canexch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canexch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5522CDE51FA10E5000055FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5522CDE71FA10E5000055FFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5522CDE71FA10E5000055FFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5522CDEC1FA10E5000055FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5522CDEF1FA10E5000055FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5522CDF11FA10E5000055FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5522CDF81FA11DD500055FFF /* FixerAPIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerAPIConstants.swift; sourceTree = "<group>"; };
+		5522CDFB1FA11E0900055FFF /* FixerNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerNetworkRequest.swift; sourceTree = "<group>"; };
+		5522CDFD1FA11E2700055FFF /* FixerGetNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerGetNetworkRequest.swift; sourceTree = "<group>"; };
+		5522CE001FA11E5800055FFF /* FixerLastestDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerLastestDataRequest.swift; sourceTree = "<group>"; };
+		5522CE031FA120D400055FFF /* FixerLatestDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerLatestDataResponse.swift; sourceTree = "<group>"; };
+		5522CE061FA120FD00055FFF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		5522CE0B1FA1684000055FFF /* ExchangeRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateManager.swift; sourceTree = "<group>"; };
+		5522CE0E1FA1752300055FFF /* Optional+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Additions.swift"; sourceTree = "<group>"; };
+		5522CE101FA175C300055FFF /* KeyboardSizableContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSizableContainerViewController.swift; sourceTree = "<group>"; };
+		5522CE121FA176D600055FFF /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		5522CE151FA177A500055FFF /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		5522CE1C1FA20A3300055FFF /* CanexchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanexchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5522CE1E1FA20A3300055FFF /* CanexchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanexchTests.swift; sourceTree = "<group>"; };
+		5522CE201FA20A3300055FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5522CE261FA20A6400055FFF /* ExchangeRateManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateManagerTest.swift; sourceTree = "<group>"; };
+		5522CE291FA2661E00055FFF /* NumberInputTextfieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputTextfieldDelegate.swift; sourceTree = "<group>"; };
 		5A016AA78977A7943FE2FDF7 /* Pods-Canexch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canexch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Canexch/Pods-Canexch.release.xcconfig"; sourceTree = "<group>"; };
 		F941053B38C575BF67CD4DA6 /* Pods-Canexch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canexch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Canexch/Pods-Canexch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +72,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8575657044788F0A15C676D /* Pods_Canexch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5522CE191FA20A3300055FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				5522CDE41FA10E5000055FFF /* Canexch */,
+				5522CE1D1FA20A3300055FFF /* CanexchTests */,
 				5522CDE31FA10E5000055FFF /* Products */,
 				4FAC7AC15B60216E24B15606 /* Pods */,
 				22883F432F77C34295F03693 /* Frameworks */,
@@ -69,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				5522CDE21FA10E5000055FFF /* Canexch.app */,
+				5522CE1C1FA20A3300055FFF /* CanexchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,12 +126,98 @@
 			isa = PBXGroup;
 			children = (
 				5522CDE51FA10E5000055FFF /* AppDelegate.swift */,
-				5522CDE71FA10E5000055FFF /* ViewController.swift */,
+				5522CE281FA2657300055FFF /* View Controllers */,
+				5522CE0D1FA1751600055FFF /* Additions */,
+				5522CDF71FA11DC300055FFF /* API */,
+				5522CE0A1FA166A000055FFF /* Classes */,
+				5522CE051FA120DF00055FFF /* Models */,
 				5522CDEC1FA10E5000055FFF /* Assets.xcassets */,
 				5522CDEE1FA10E5000055FFF /* LaunchScreen.storyboard */,
 				5522CDF11FA10E5000055FFF /* Info.plist */,
 			);
 			path = Canexch;
+			sourceTree = "<group>";
+		};
+		5522CDF71FA11DC300055FFF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5522CDFA1FA11DE200055FFF /* Base */,
+				5522CDFF1FA11E3D00055FFF /* Requests */,
+				5522CE021FA120BF00055FFF /* Responses */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5522CDFA1FA11DE200055FFF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5522CDF81FA11DD500055FFF /* FixerAPIConstants.swift */,
+				5522CDFB1FA11E0900055FFF /* FixerNetworkRequest.swift */,
+				5522CDFD1FA11E2700055FFF /* FixerGetNetworkRequest.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5522CDFF1FA11E3D00055FFF /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				5522CE001FA11E5800055FFF /* FixerLastestDataRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		5522CE021FA120BF00055FFF /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				5522CE031FA120D400055FFF /* FixerLatestDataResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		5522CE051FA120DF00055FFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5522CE061FA120FD00055FFF /* Currency.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5522CE0A1FA166A000055FFF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5522CE0B1FA1684000055FFF /* ExchangeRateManager.swift */,
+				5522CE291FA2661E00055FFF /* NumberInputTextfieldDelegate.swift */,
+				5522CE101FA175C300055FFF /* KeyboardSizableContainerViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5522CE0D1FA1751600055FFF /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				5522CE0E1FA1752300055FFF /* Optional+Additions.swift */,
+				5522CE121FA176D600055FFF /* UIViewController+Additions.swift */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		5522CE1D1FA20A3300055FFF /* CanexchTests */ = {
+			isa = PBXGroup;
+			children = (
+				5522CE1E1FA20A3300055FFF /* CanexchTests.swift */,
+				5522CE261FA20A6400055FFF /* ExchangeRateManagerTest.swift */,
+				5522CE201FA20A3300055FFF /* Info.plist */,
+			);
+			path = CanexchTests;
+			sourceTree = "<group>";
+		};
+		5522CE281FA2657300055FFF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5522CDE71FA10E5000055FFF /* MainViewController.swift */,
+				5522CE151FA177A500055FFF /* MainViewController.xib */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +243,24 @@
 			productReference = 5522CDE21FA10E5000055FFF /* Canexch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5522CE1B1FA20A3300055FFF /* CanexchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5522CE231FA20A3300055FFF /* Build configuration list for PBXNativeTarget "CanexchTests" */;
+			buildPhases = (
+				5522CE181FA20A3300055FFF /* Sources */,
+				5522CE191FA20A3300055FFF /* Frameworks */,
+				5522CE1A1FA20A3300055FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5522CE221FA20A3300055FFF /* PBXTargetDependency */,
+			);
+			name = CanexchTests;
+			productName = CanexchTests;
+			productReference = 5522CE1C1FA20A3300055FFF /* CanexchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -121,6 +274,11 @@
 					5522CDE11FA10E5000055FFF = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+					};
+					5522CE1B1FA20A3300055FFF = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5522CDE11FA10E5000055FFF;
 					};
 				};
 			};
@@ -138,6 +296,7 @@
 			projectRoot = "";
 			targets = (
 				5522CDE11FA10E5000055FFF /* Canexch */,
+				5522CE1B1FA20A3300055FFF /* CanexchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -149,6 +308,14 @@
 			files = (
 				5522CDF01FA10E5000055FFF /* LaunchScreen.storyboard in Resources */,
 				5522CDED1FA10E5000055FFF /* Assets.xcassets in Resources */,
+				5522CE171FA177A500055FFF /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5522CE1A1FA20A3300055FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,12 +374,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5522CDE81FA10E5000055FFF /* ViewController.swift in Sources */,
+				5522CE111FA175C400055FFF /* KeyboardSizableContainerViewController.swift in Sources */,
+				5522CE041FA120D400055FFF /* FixerLatestDataResponse.swift in Sources */,
+				5522CE0F1FA1752300055FFF /* Optional+Additions.swift in Sources */,
+				5522CE2A1FA2661E00055FFF /* NumberInputTextfieldDelegate.swift in Sources */,
+				5522CDFE1FA11E2700055FFF /* FixerGetNetworkRequest.swift in Sources */,
+				5522CDF91FA11DD500055FFF /* FixerAPIConstants.swift in Sources */,
+				5522CE0C1FA1684000055FFF /* ExchangeRateManager.swift in Sources */,
+				5522CDFC1FA11E0900055FFF /* FixerNetworkRequest.swift in Sources */,
+				5522CE071FA120FD00055FFF /* Currency.swift in Sources */,
+				5522CE131FA176D600055FFF /* UIViewController+Additions.swift in Sources */,
+				5522CE011FA11E5800055FFF /* FixerLastestDataRequest.swift in Sources */,
+				5522CDE81FA10E5000055FFF /* MainViewController.swift in Sources */,
 				5522CDE61FA10E5000055FFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5522CE181FA20A3300055FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5522CE271FA20A6400055FFF /* ExchangeRateManagerTest.swift in Sources */,
+				5522CE1F1FA20A3300055FFF /* CanexchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5522CE221FA20A3300055FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5522CDE11FA10E5000055FFF /* Canexch */;
+			targetProxy = 5522CE211FA20A3300055FFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5522CDEE1FA10E5000055FFF /* LaunchScreen.storyboard */ = {
@@ -365,6 +560,38 @@
 			};
 			name = Release;
 		};
+		5522CE241FA20A3300055FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NC6PEUTA52;
+				INFOPLIST_FILE = CanexchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elsonbaty.CanexchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canexch.app/Canexch";
+			};
+			name = Debug;
+		};
+		5522CE251FA20A3300055FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NC6PEUTA52;
+				INFOPLIST_FILE = CanexchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elsonbaty.CanexchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canexch.app/Canexch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -382,6 +609,15 @@
 			buildConfigurations = (
 				5522CDF51FA10E5000055FFF /* Debug */,
 				5522CDF61FA10E5000055FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5522CE231FA20A3300055FFF /* Build configuration list for PBXNativeTarget "CanexchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5522CE241FA20A3300055FFF /* Debug */,
+				5522CE251FA20A3300055FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

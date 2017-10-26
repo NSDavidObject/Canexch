@@ -1,8 +1,10 @@
 PODS:
   - Benetwork (1.0.0)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Benetwork (from `https://github.com/NSDavidObject/Benetwork.git`)
+  - SnapKit
 
 EXTERNAL SOURCES:
   Benetwork:
@@ -15,7 +17,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Benetwork: 1caf9efea49d4d850fe386053694ec7ee17a8ad8
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 2aaeaf487ca40211ee1f5a15f2108ad3c6f0c743
+PODFILE CHECKSUM: 58bdd2b1403c02b94b4019a63efb3156cc2ffd76
 
 COCOAPODS: 1.2.1
