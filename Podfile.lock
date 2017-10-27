@@ -1,9 +1,11 @@
 PODS:
   - Benetwork (1.0.0)
+  - RSSelectionMenu (2.0.2)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Benetwork (from `https://github.com/NSDavidObject/Benetwork.git`)
+  - RSSelectionMenu
   - SnapKit
 
 EXTERNAL SOURCES:
@@ -17,8 +19,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Benetwork: 1caf9efea49d4d850fe386053694ec7ee17a8ad8
+  RSSelectionMenu: 4b20c4e43fb5c45d69a23d706e589a282724357c
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 58bdd2b1403c02b94b4019a63efb3156cc2ffd76
+PODFILE CHECKSUM: 15c528152a91ea1838beadd479fe12649af99ecc
 
 COCOAPODS: 1.2.1

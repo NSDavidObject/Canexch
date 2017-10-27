@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import RSSelectionMenu
 
 private struct Constants {
     
     // I'd normally create a UIColor category which includes the color palette of the app but don't wanna spend more time on these small details/optimizations for this take home. Also the same for UIFonts
-    static let backgroundColor: UIColor = UIColor(red:43.0/255.0, green:202.0/255.0, blue:236.0/255.0, alpha:255.0/255.0)
-    static let exchangeRateBarIconsColor: UIColor = UIColor(red:140.0/255.0, green:150.0/255.0, blue:156.0/255.0, alpha:255.0/255.0)
+    static let backgroundColor: UIColor = UIColor(red: 43.0/255.0, green: 202.0/255.0, blue: 236.0/255.0, alpha: 255.0/255.0)
+    static let exchangeRateBarIconsColor: UIColor = UIColor(red: 140.0/255.0, green: 150.0/255.0, blue: 156.0/255.0, alpha: 255.0/255.0)
     static let conversionTitleLabelTextColor: UIColor = UIColor.white.withAlphaComponent(0.6)
     static let conversionValuesTextColor: UIColor = UIColor.white
     
@@ -25,6 +26,7 @@ class MainViewController: UIViewController {
     private static let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
+        formatter.currencySymbol = ""
         return formatter
     }()
     
@@ -45,14 +47,12 @@ class MainViewController: UIViewController {
     var conversionCurrency: Currency? = Constants.defaultConversionCurrency
     var exchangeRateManager: ExchangeRateManager? {
         didSet {
-            exchangeRateManager.apply({ setup(withExchangeRateManager: $0) })
+            setupCurrenciesAndValues()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Canexch"
         
         textFieldDelegate.delegate = self
         conversionBaseValueTextField.delegate = textFieldDelegate
@@ -62,6 +62,7 @@ class MainViewController: UIViewController {
         
         setupAppearance()
         fetchExchangeRates()
+        setupCurrenciesAndValues()
     }
 
     func setupAppearance() {
@@ -105,17 +106,17 @@ class MainViewController: UIViewController {
             }
             
             strongSelf.exchangeRateManager = exchangeRateManager
-            
-            let conversionCurrencyTitle: String = strongSelf.conversionCurrency?.abbreviation ?? "NAN"
-            strongSelf.baseCurrencyButton.setTitle(strongSelf.baseCurrency.abbreviation, for: .normal)
-            strongSelf.conversionCurrencyButton.setTitle(conversionCurrencyTitle, for: .normal)
-            
             strongSelf.loadingLabel.isHidden = true
             strongSelf.conversionBaseValueTextField.isEnabled = true
         }
     }
     
-    func setup(withExchangeRateManager exchangeRateManager: ExchangeRateManager) {
+    func setupCurrenciesAndValues() {
+        let conversionCurrencyTitle: String = conversionCurrency?.abbreviation ?? "NAN"
+        baseCurrencyButton.setTitle(baseCurrency.abbreviation, for: .normal)
+        conversionCurrencyButton.setTitle(conversionCurrencyTitle, for: .normal)
+        
+        textFieldDelegate.resetValueAmount()
         computeAndDisplayExchangeRate(forBaseConversionValue: 0)
     }
     
@@ -139,12 +140,38 @@ class MainViewController: UIViewController {
         return MainViewController.numberFormatter.string(from: currentValueAmountNumber) ?? "NAN"
     }
     
-    @IBAction func didTapBaseCurrencySelection(_ sender: Any) {
-        
+    @IBAction func didTapBaseCurrencySelection(_ sender: UIButton) {
+        guard let conversionCurrency = conversionCurrency else { return }
+        showCurrencySelection(showFromView: sender, omitting: conversionCurrency, selected: baseCurrency, completion: { [weak self] selectedCurrency in
+            guard let strongSelf = self else { return }
+            strongSelf.baseCurrency = selectedCurrency
+            strongSelf.setupCurrenciesAndValues()
+        })
     }
     
-    @IBAction func didTapConversionCurrencySelection(_ sender: Any) {
+    @IBAction func didTapConversionCurrencySelection(_ sender: UIButton) {
+        guard let conversionCurrency = conversionCurrency else { return }
+        showCurrencySelection(showFromView: sender, omitting: baseCurrency, selected: conversionCurrency, completion: { [weak self] selectedCurrency in
+            guard let strongSelf = self else { return }
+            strongSelf.conversionCurrency = selectedCurrency
+            strongSelf.setupCurrenciesAndValues()
+        })
+    }
+    
+    private func showCurrencySelection(showFromView sourceView: UIView, omitting omittedCurrency: Currency, selected selectedCurrency: Currency, completion: @escaping (Currency) -> Void) {
+        guard let exchangeRateManager = exchangeRateManager else { return }
         
+        let filteredCurrencies: [String] = exchangeRateManager.availableCurrencies.filter({ $0 != omittedCurrency }).map({ $0.abbreviation }).sorted()
+        let selectedItems: [String] = [selectedCurrency.abbreviation]
+        let selectionMenu = RSSelectionMenu(dataSource: filteredCurrencies, selectedItems: selectedItems) { (cell, abbreviation, indexPath) in
+            cell.textLabel?.text = abbreviation
+        }
+        selectionMenu.showAsPopover(from: sourceView, inViewController: self)
+        selectionMenu.didSelectRow { (selectedAbbreviation, _, _) in
+            guard let selectedAbbreviation = selectedAbbreviation else { return }
+            let selectedCurrency = Currency(abbreviation: selectedAbbreviation)
+            completion(selectedCurrency)
+        }
     }
 }
 

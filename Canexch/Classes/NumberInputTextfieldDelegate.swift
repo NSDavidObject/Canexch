@@ -33,6 +33,10 @@ class NumberInputTextfieldDelegate: NSObject {
         self.value = Int(initalValue * 10)
     }
     
+    func resetValueAmount(to newValue: Double = 0.0) {
+        self.value = Int(newValue * 10)
+    }
+    
     func updateDelegateWithChange() {
         let updatedValueAmount = valueAmount(forValue: value)
         delegate?.numberInputTextfieldDelegate(self, didUpdateToValue: updatedValueAmount)
