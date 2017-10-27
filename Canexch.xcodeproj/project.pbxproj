@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550ADE031FA2C57800BE3BD9 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADE021FA2C57800BE3BD9 /* UIColor+Additions.swift */; };
 		5522CDE61FA10E5000055FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDE51FA10E5000055FFF /* AppDelegate.swift */; };
 		5522CDE81FA10E5000055FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CDE71FA10E5000055FFF /* MainViewController.swift */; };
 		5522CDED1FA10E5000055FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5522CDEC1FA10E5000055FFF /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2E1AB4A7A957CF9A0699CB1F /* Pods_Canexch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Canexch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550ADE021FA2C57800BE3BD9 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		5522CDE21FA10E5000055FFF /* Canexch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canexch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5522CDE51FA10E5000055FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5522CDE71FA10E5000055FFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		550ADE011FA2C56700BE3BD9 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				550ADE021FA2C57800BE3BD9 /* UIColor+Additions.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
 		5522CDD91FA10E5000055FFF = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				5522CDE51FA10E5000055FFF /* AppDelegate.swift */,
+				550ADE011FA2C56700BE3BD9 /* Appearance */,
 				5522CE281FA2657300055FFF /* View Controllers */,
 				5522CE0D1FA1751600055FFF /* Additions */,
 				5522CDF71FA11DC300055FFF /* API */,
@@ -387,6 +398,7 @@
 				5522CE011FA11E5800055FFF /* FixerLastestDataRequest.swift in Sources */,
 				5522CDE81FA10E5000055FFF /* MainViewController.swift in Sources */,
 				5522CDE61FA10E5000055FFF /* AppDelegate.swift in Sources */,
+				550ADE031FA2C57800BE3BD9 /* UIColor+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

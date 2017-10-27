@@ -8,6 +8,12 @@
 
 import UIKit
 
+private struct Constants {
+    static let defaultMaxValueAmount: Double = 9999.99
+    static let defaultInitialValue: Double = 0.0
+    static let defaultResetValueAmount: Double = 0.0
+}
+
 // MARK: - NumberInputTextfieldDelegateDelegate
 
 protocol NumberInputTextfieldDelegateDelegate: class {
@@ -28,12 +34,12 @@ class NumberInputTextfieldDelegate: NSObject {
     weak var delegate: NumberInputTextfieldDelegateDelegate?
     
     let maxValueAmount: Double
-    init(maxValueAmount: Double = 9999.99, initalValue: Double = 0.0) {
+    init(maxValueAmount: Double = Constants.defaultMaxValueAmount, initalValue: Double = Constants.defaultInitialValue) {
         self.maxValueAmount = maxValueAmount
         self.value = Int(initalValue * 10)
     }
     
-    func resetValueAmount(to newValue: Double = 0.0) {
+    func resetValueAmount(to newValue: Double = Constants.defaultResetValueAmount) {
         self.value = Int(newValue * 10)
     }
     

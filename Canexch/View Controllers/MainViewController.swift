@@ -10,13 +10,6 @@ import UIKit
 import RSSelectionMenu
 
 private struct Constants {
-    
-    // I'd normally create a UIColor category which includes the color palette of the app but don't wanna spend more time on these small details/optimizations for this take home. Also the same for UIFonts
-    static let backgroundColor: UIColor = UIColor(red: 43.0/255.0, green: 202.0/255.0, blue: 236.0/255.0, alpha: 255.0/255.0)
-    static let exchangeRateBarIconsColor: UIColor = UIColor(red: 140.0/255.0, green: 150.0/255.0, blue: 156.0/255.0, alpha: 255.0/255.0)
-    static let conversionTitleLabelTextColor: UIColor = UIColor.white.withAlphaComponent(0.6)
-    static let conversionValuesTextColor: UIColor = UIColor.white
-    
     static let defaultBaseCurrency: Currency = Currency(abbreviation: "USD")
     static let defaultConversionCurrency: Currency = Currency(abbreviation: "CAD")
 }
@@ -67,18 +60,18 @@ class MainViewController: UIViewController {
 
     func setupAppearance() {
         
-        view.backgroundColor = Constants.backgroundColor
-        exchangeIconImageView.tintColor = Constants.exchangeRateBarIconsColor
+        view.backgroundColor = UIColor.mainViewControllerBackgroundColor
+        exchangeIconImageView.tintColor = UIColor.mainViewControllerExchangeRateBarIconsColor
         exchangeIconImageView.image = #imageLiteral(resourceName: "exchange-icon").withRenderingMode(.alwaysTemplate)
         
-        baseCurrencyButton.setTitleColor(Constants.exchangeRateBarIconsColor, for: .normal)
-        conversionCurrencyButton.setTitleColor(Constants.exchangeRateBarIconsColor, for: .normal)
+        baseCurrencyButton.setTitleColor(UIColor.mainViewControllerExchangeRateBarIconsColor, for: .normal)
+        conversionCurrencyButton.setTitleColor(UIColor.mainViewControllerExchangeRateBarIconsColor, for: .normal)
         
-        conversionBaseTitleLabel.textColor = Constants.conversionTitleLabelTextColor
-        conversionToTitleLabel.textColor = Constants.conversionTitleLabelTextColor
+        conversionBaseTitleLabel.textColor = UIColor.mainViewControllerConversionTitleLabelTextColor
+        conversionToTitleLabel.textColor = UIColor.mainViewControllerConversionTitleLabelTextColor
     
-        convertedValueTitleLabel.textColor = Constants.conversionValuesTextColor
-        conversionBaseValueTextField.textColor = Constants.conversionValuesTextColor
+        convertedValueTitleLabel.textColor = UIColor.mainViewControllerConversionValuesTextColor
+        conversionBaseValueTextField.textColor = UIColor.mainViewControllerConversionValuesTextColor
     }
     
     func fetchExchangeRates() {
@@ -112,6 +105,7 @@ class MainViewController: UIViewController {
     }
     
     func setupCurrenciesAndValues() {
+        
         let conversionCurrencyTitle: String = conversionCurrency?.abbreviation ?? "NAN"
         baseCurrencyButton.setTitle(baseCurrency.abbreviation, for: .normal)
         conversionCurrencyButton.setTitle(conversionCurrencyTitle, for: .normal)
